@@ -1,0 +1,196 @@
+@font-face{
+    font-family: "Avenirltstd";
+    src: url('../fonts/avenir.otf');
+}
+
+@font-face{
+    font-family: "Avenirltstd-bold";
+    src: url('../fonts/avenir-bold.otf');
+}
+
+*{
+	margin: 0;
+}
+
+.container{
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.interface{
+	border: 1px solid #000;
+	margin: 0 auto;
+	background-color: #fff;
+	width: 415px;
+	height: 360px;
+	position: relative;
+}
+
+.conteudo1{
+	padding: 50px 25px;
+	height: 260px;
+	width: 200px;
+	position: absolute;
+}
+
+.conteudo2{
+	height: 260px;
+	width: 150px;
+	top: 60px;
+	left: 240px; 
+	position: absolute;
+}
+
+.channel{
+	width: 146px;
+	height: 50px;
+	text-align: center;
+	font-size: 40px;
+	margin-bottom: 6px;
+	color: #0c8e36;
+	font-family: 'Avenirltstd-bold';
+	font-weight: bold;
+}
+
+.botoesNumericos{
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	font-size: 30px;
+	border: none;
+	background-color: #d5e5da;
+	color: #0c8e36;
+	margin: 3px;
+	font-family: 'Avenirltstd';
+	font-weight: bold;
+}
+
+.rightButton{
+	position: absolute;
+	top: 145px;
+	left: 160px;
+	width: 60px;
+	height: 60px;
+	color: white;
+	background-color:#0c8e36;
+	border: none;
+	border-radius: 50px;
+	font-size: 20px;
+}
+
+.leftButton{
+	position: absolute;
+	top: 145px;
+	left: 30px;
+	width: 60px;
+	height: 60px;
+	color: white;
+	background-color:#0c8e36;
+	border: none;
+	border-radius: 50px;
+	font-size: 20px;
+}
+
+.okButton{
+	position: absolute;
+	top: 135px;
+	left: 80px;
+	width: 90px;
+	height: 80px;
+	color: white;
+	background-color:#0c8e36;
+	border: solid white 3px;
+	border-radius: 50%;
+	font-family: 'Avenirltstd-bold';
+	font-size: 20px;
+}
+
+.control{
+	background-color: #0c8e36;
+	height: 140px;
+	width: 200px;
+	margin-top: 55px;
+	-moz-border-radius: 200px / 130px; 
+    -webkit-border-radius: 200px / 130px; 
+    border-radius: 200px / 130px;  
+}
+
+.logo{
+	position: absolute;
+	top: 20px;
+	left: 160px;
+}
+
+.logomarca{
+	width: 	90px;
+	height: 34.35px;
+}
+
+.opacity{
+	opacity: 0.5;
+}
+
+.hidden{
+	display: none;
+}
+
+.library{
+	position: relative;
+	left: 70px;
+	top: 8px;
+	width: 60px;
+	height: 60px;
+	color: white;	
+	background-color: orange;
+	border: none;
+	border-radius: 50px;
+	font-family: 'Avenirltstd';
+	font-size: 20px;
+}
+
+.navigation{
+	position: relative;
+	left: 70px;
+	top: 8px;
+	width: 60px;
+	height: 60px;
+	color:#ffffff;	
+	background-color:#000000;
+	border: none;
+	border-radius: 50px;
+	font-family: 'Avenirltstd';
+	font-size: 20px;
+}
+
+.libraryTitle{
+	font-family: 'Avenirltstd-bold';
+	color: #0c8e36;
+	top: 70px;
+	left: 135px; 
+	position: absolute;
+}
+
+.libraryDesc{
+	font-family: 'Avenirltstd';
+	color: #0c8e36;
+	top: 325px;
+	left: 70px; 
+	position: absolute;
+}
+
+.setaLibrary{
+	width: 25px;
+	height: 25px;
+	margin-top: 5px;
+	margin-left: 6px;
+}
+
+.delete{
+	width: 18px;
+	height: 18px;
+	margin-bottom: 1px;
+}
