@@ -35,6 +35,29 @@ button{
 	position: relative;
 }
 
+.logo{
+	position: absolute;
+	top: 20px;
+	left: 160px;
+}
+
+.logomarca{
+	width: 	90px;
+	height: 34.35px;
+}
+
+.libraryTitle{
+	font-family: 'Avenirltstd-bold';
+	color: #0c8e36;
+	top: 70px;
+	left: 135px; 
+	position: absolute;
+}
+
+.hidden{
+	display: none;
+}
+
 .conteudo1{
 	padding: 50px 25px;
 	height: 260px;
@@ -42,32 +65,14 @@ button{
 	position: absolute;
 }
 
-.conteudo2{
-	height: 260px;
-	width: 150px;
-	top: 60px;
-	left: 240px; 
-	position: absolute;
-}
-
-.channel{
-	height: 50px;
-	text-align: center;
-	font-size: 2.3em;
-	margin-bottom: 6px;
-	color: #0c8e36;
-	font-family: 'Avenirltstd-bold';
-}
-
-.botoesNumericos{
-	width: 40px;
-	height: 40px;
-	font-size: 2em;
-	background-color: #d5e5da;
-	color: #0c8e36;
-	margin: 3px;
-	font-family: 'Avenirltstd';
-	font-weight: bold;
+.control{
+	background-color: #0c8e36;
+	height: 140px;
+	width: 200px;
+	margin-top: 55px;
+	-moz-border-radius: 200px / 130px; 
+    -webkit-border-radius: 200px / 130px; 
+    border-radius: 200px / 130px;  
 }
 
 .rightButton{
@@ -103,35 +108,6 @@ button{
 	font-size: 1.25em;
 }
 
-.control{
-	background-color: #0c8e36;
-	height: 140px;
-	width: 200px;
-	margin-top: 55px;
-	-moz-border-radius: 200px / 130px; 
-    -webkit-border-radius: 200px / 130px; 
-    border-radius: 200px / 130px;  
-}
-
-.logo{
-	position: absolute;
-	top: 20px;
-	left: 160px;
-}
-
-.logomarca{
-	width: 	90px;
-	height: 34.35px;
-}
-
-.opacity{
-	opacity: 0.5;
-}
-
-.hidden{
-	display: none;
-}
-
 .library{
 	position: relative;
 	left: 70px;
@@ -139,6 +115,13 @@ button{
 	width: 60px;
 	height: 60px;	
 	background-color: orange;
+}
+
+.setaLibrary{
+	width: 25px;
+	height: 25px;
+	margin-top: 5px;
+	margin-left: 6px;
 }
 
 .navigation{
@@ -151,12 +134,39 @@ button{
 	font-family: 'Avenirltstd';
 }
 
-.libraryTitle{
-	font-family: 'Avenirltstd-bold';
-	color: #0c8e36;
-	top: 70px;
-	left: 135px; 
+.conteudo2{
+	height: 260px;
+	width: 150px;
+	top: 60px;
+	left: 240px; 
 	position: absolute;
+}
+
+.channel{
+	height: 50px;
+	text-align: center;
+	font-size: 2.3em;
+	margin-bottom: 6px;
+	color: #0c8e36;
+	font-family: 'Avenirltstd-bold';
+}
+
+.botoesNumericos{
+	width: 40px;
+	height: 40px;
+	font-size: 2em;
+	background-color: #d5e5da;
+	color: #0c8e36;
+	margin: 3px;
+	font-family: 'Avenirltstd';
+	font-weight: bold;
+}
+
+
+.delete{
+	width: 18px;
+	height: 18px;
+	margin-bottom: 1px;
 }
 
 .libraryDesc{
@@ -167,15 +177,7 @@ button{
 	position: absolute;
 }
 
-.setaLibrary{
-	width: 25px;
-	height: 25px;
-	margin-top: 5px;
-	margin-left: 6px;
-}
 
-.delete{
-	width: 18px;
-	height: 18px;
-	margin-bottom: 1px;
+.opacity{
+	opacity: 0.5;
 }
