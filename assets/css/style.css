@@ -12,6 +12,12 @@
 	margin: 0;
 }
 
+button{
+	border: none;
+	color: #ffffff;
+	border-radius: 100%;
+}
+
 .container{
 	width: 100vw;
 	height: 100vh;
@@ -24,7 +30,6 @@
 .interface{
 	border: 1px solid #000;
 	margin: 0 auto;
-	background-color: #fff;
 	width: 415px;
 	height: 360px;
 	position: relative;
@@ -46,22 +51,18 @@
 }
 
 .channel{
-	width: 146px;
 	height: 50px;
 	text-align: center;
-	font-size: 40px;
+	font-size: 2.3em;
 	margin-bottom: 6px;
 	color: #0c8e36;
 	font-family: 'Avenirltstd-bold';
-	font-weight: bold;
 }
 
 .botoesNumericos{
 	width: 40px;
 	height: 40px;
-	border-radius: 100%;
-	font-size: 30px;
-	border: none;
+	font-size: 2em;
 	background-color: #d5e5da;
 	color: #0c8e36;
 	margin: 3px;
@@ -75,11 +76,8 @@
 	left: 160px;
 	width: 60px;
 	height: 60px;
-	color: white;
 	background-color:#0c8e36;
-	border: none;
-	border-radius: 50px;
-	font-size: 20px;
+	font-size: 1.25em;
 }
 
 .leftButton{
@@ -88,11 +86,8 @@
 	left: 30px;
 	width: 60px;
 	height: 60px;
-	color: white;
 	background-color:#0c8e36;
-	border: none;
-	border-radius: 50px;
-	font-size: 20px;
+	font-size: 1.25em;
 }
 
 .okButton{
@@ -101,12 +96,11 @@
 	left: 80px;
 	width: 90px;
 	height: 80px;
-	color: white;
 	background-color:#0c8e36;
 	border: solid white 3px;
 	border-radius: 50%;
 	font-family: 'Avenirltstd-bold';
-	font-size: 20px;
+	font-size: 1.25em;
 }
 
 .control{
@@ -143,13 +137,8 @@
 	left: 70px;
 	top: 8px;
 	width: 60px;
-	height: 60px;
-	color: white;	
+	height: 60px;	
 	background-color: orange;
-	border: none;
-	border-radius: 50px;
-	font-family: 'Avenirltstd';
-	font-size: 20px;
 }
 
 .navigation{
@@ -158,12 +147,8 @@
 	top: 8px;
 	width: 60px;
 	height: 60px;
-	color:#ffffff;	
 	background-color:#000000;
-	border: none;
-	border-radius: 50px;
 	font-family: 'Avenirltstd';
-	font-size: 20px;
 }
 
 .libraryTitle{
