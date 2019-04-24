@@ -84,6 +84,7 @@ button{
 	height: 60px;
 	background-color:#0c8e36;
 	font-size: 1.25em;
+	cursor: pointer;
 }
 
 .leftButton{
@@ -96,9 +97,11 @@ button{
 	height: 60px;
 	background-color:#0c8e36;
 	font-size: 1.25em;
+	cursor: pointer;
 }
 
 .okButton{
+	cursor: pointer;
 	transition: .3s all;
 	position: absolute;
 	top: 20%;
@@ -119,6 +122,8 @@ button{
 }
 
 .library{
+	cursor: pointer;
+	outline: none;
 	margin-top: 15px;
 	width: 60px;
 	height: 60px;	
@@ -133,6 +138,8 @@ button{
 }
 
 .navigation{
+	cursor: pointer;
+	outline: none;
 	margin-top: 15px;
 	width: 60px;
 	height: 60px;
