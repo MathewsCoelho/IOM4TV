@@ -63,6 +63,7 @@ button{
 }
 
 .control{
+	transition: .3s all;
 	position: relative;
 	background-color: #0c8e36;
 	height: 140px;
@@ -74,6 +75,7 @@ button{
 }
 
 .rightButton{
+	transition: .3s all;
 	position: absolute;
 	top: 50%;
 	right: 0;
@@ -85,6 +87,7 @@ button{
 }
 
 .leftButton{
+	transition: .3s all;
 	position: absolute;
 	top: 50%;
 	left: 0;
@@ -96,6 +99,7 @@ button{
 }
 
 .okButton{
+	transition: .3s all;
 	position: absolute;
 	top: 20%;
 	left: 50%;
@@ -107,6 +111,11 @@ button{
 	border-radius: 50%;
 	font-family: 'Avenirltstd-bold';
 	font-size: 1.25em;
+}
+
+
+.control.active, .control.active .rightButton, .control.active .leftButton, .control.active .okButton{
+	background-color: #f39c12;
 }
 
 .library{

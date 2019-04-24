@@ -43,6 +43,7 @@ $('.library').click(function(){
 	console.log('Você abriu a biblioteca');
 	parametros.keyCode = TVkeyCodes['OPEN_CLOSE_LIB'];
 	sendRequest();
+	$('.control').addClass("active");
 	$('.navigation').toggleClass("hidden");
 	$('.library').toggleClass("hidden");
 	$('.rightButton').attr('onclick', 'trocaVideo("direita")');
@@ -55,9 +56,9 @@ $('.library').click(function(){
 
 $('.navigation').click(function(){
 	console.log('Você fechou a biblioteca');
-	$( ".botoesNumericos" ).prop( "disabled", false);
 	parametros.keyCode = TVkeyCodes['OPEN_CLOSE_LIB'];
-	sendRequest();
+	sendRequest();	
+	$('.control').removeClass("active");
 	$('.navigation').toggleClass("hidden");
 	$('.library').toggleClass("hidden");
 	$('.rightButton').attr('onclick', 'trocaCanal("direita")');
