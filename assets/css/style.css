@@ -33,12 +33,20 @@ button{
 	width: 415px;
 	height: 360px;
 	position: relative;
+	text-align: center;
+}
+
+.content{
+	height: 260px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
 
 .logo{
-	position: absolute;
-	top: 20px;
-	left: 160px;
+	margin-top: 35px;
 }
 
 .logomarca{
@@ -49,27 +57,17 @@ button{
 .libraryTitle{
 	font-family: 'Avenirltstd-bold';
 	color: #0c8e36;
-	top: 70px;
+	top: 80px;
 	left: 135px; 
 	position: absolute;
 }
 
-.hidden{
-	display: none;
-}
-
-.conteudo1{
-	padding: 50px 25px;
-	height: 260px;
-	width: 200px;
-	position: absolute;
-}
-
 .control{
+	position: relative;
 	background-color: #0c8e36;
 	height: 140px;
 	width: 200px;
-	margin-top: 55px;
+	margin-top: 25px;
 	-moz-border-radius: 200px / 130px; 
     -webkit-border-radius: 200px / 130px; 
     border-radius: 200px / 130px;  
@@ -77,8 +75,9 @@ button{
 
 .rightButton{
 	position: absolute;
-	top: 145px;
-	left: 160px;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
 	width: 60px;
 	height: 60px;
 	background-color:#0c8e36;
@@ -87,8 +86,9 @@ button{
 
 .leftButton{
 	position: absolute;
-	top: 145px;
-	left: 30px;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
 	width: 60px;
 	height: 60px;
 	background-color:#0c8e36;
@@ -97,9 +97,10 @@ button{
 
 .okButton{
 	position: absolute;
-	top: 135px;
-	left: 80px;
+	top: 20%;
+	left: 50%;
 	width: 90px;
+	transform: translate(-50%);
 	height: 80px;
 	background-color:#0c8e36;
 	border: solid white 3px;
@@ -109,12 +110,10 @@ button{
 }
 
 .library{
-	position: relative;
-	left: 70px;
-	top: 8px;
+	margin-top: 15px;
 	width: 60px;
 	height: 60px;	
-	background-color: orange;
+	background-color: #f39c12;
 }
 
 .setaLibrary{
@@ -125,59 +124,18 @@ button{
 }
 
 .navigation{
-	position: relative;
-	left: 70px;
-	top: 8px;
+	margin-top: 15px;
 	width: 60px;
 	height: 60px;
-	background-color:#000000;
+	background-color:#0c8e36;
 	font-family: 'Avenirltstd';
-}
-
-.conteudo2{
-	height: 260px;
-	width: 150px;
-	top: 60px;
-	left: 240px; 
-	position: absolute;
-}
-
-.channel{
-	height: 50px;
-	text-align: center;
-	font-size: 2.3em;
-	margin-bottom: 6px;
-	color: #0c8e36;
-	font-family: 'Avenirltstd-bold';
-}
-
-.botoesNumericos{
-	width: 40px;
-	height: 40px;
-	font-size: 2em;
-	background-color: #d5e5da;
-	color: #0c8e36;
-	margin: 3px;
-	font-family: 'Avenirltstd';
-	font-weight: bold;
-}
-
-
-.delete{
-	width: 18px;
-	height: 18px;
-	margin-bottom: 1px;
 }
 
 .libraryDesc{
 	font-family: 'Avenirltstd';
 	color: #0c8e36;
-	top: 325px;
-	left: 70px; 
-	position: absolute;
 }
 
-
-.opacity{
-	opacity: 0.5;
+.hidden{
+	display: none;
 }

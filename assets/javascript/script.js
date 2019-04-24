@@ -1,59 +1,21 @@
+//	ONE: 49, TWO: 50, THREE: 51, FOUR: 52, FIVE: 53, SIX: 54, SEVEN: 55, EIGHT: 56,	NINE: 57,
 let TVkeyCodes = {
 	UP: 40,
 	DOWN: 38,
-	ONE: 49,
-	TWO: 50,
-	THREE: 51,
-	FOUR: 52,
-	FIVE: 53,
-	SIX: 54,
-	SEVEN: 55,
-	EIGHT: 56,
-	NINE: 57,
 	OPEN_CLOSE_LIB: 48,
 	OK: 13,
 	LEFT: 37,
 	RIGHT: 39,
-	SEND_VIDEO: 8
+	SEND_VIDEO: 8,
+	CLOSE_LIB: 0
 }
-
-let codigoCaixa = '';
-let channel = document.getElementById("channel");
 
 let parametros = {
 	"keyCode" : ''
 };
 
-function adicionarCanal($numCanal){
-	let valor = channel.innerHTML;
-	if(valor.length >= 3){
-		channel.innerHTML = '';
-		codigoCaixa = '';
-	}
-	let numCanal = parseInt($numCanal);
-	let valorAPI = numCanal + 48;
-	channel.innerHTML = channel.innerHTML + $numCanal;
-	codigoCaixa = codigoCaixa + valorAPI;
-	
-}
-
-function escolherCanal(){
-	let valor = channel.innerHTML;
-	if(valor !== ""){
-		codigoCaixa += 13;
-		console.log("Você escolheu canal " + valor + ".");
-		console.log('Enviou para API o valor:' + codigoCaixa); 
-		parametros.keyCode = codigoCaixa;
-		channel.innerHTML = "";
-		codigoCaixa = '';
-		sendRequest();
-	} 
-}
-
 function trocaCanal($funcao){
 	console.log("Você trocou de canal para " + $funcao + ".");
-	channel.innerHTML = ""; 
-	codigoCaixa = '';
 	if($funcao == 'esquerda'){
 		parametros.keyCode = TVkeyCodes['UP'];
 	}
@@ -63,45 +25,32 @@ function trocaCanal($funcao){
 	sendRequest();
 }
 
+
 function trocaVideo($funcao){
 	console.log("Você trocou de video para " + $funcao + ".");
 	if($funcao == 'esquerda'){
 		parametros.keyCode = TVkeyCodes['LEFT'];
+		console.log("Keycode " + TVkeyCodes['LEFT'] + ".");
 	}
 	else if($funcao == 'direita'){
 		parametros.keyCode = TVkeyCodes['RIGHT'];
+		console.log("Keycode " + TVkeyCodes['RIGHT'] + ".");
 	}
 	sendRequest();
-}
-
-function removeCanal(){
-	channel.innerHTML = "";
-	codigoCaixa = '';
-}
-
-function sendRequest(){
-	$.ajax({
-		url:"http://api_mysql.tv4e.pt/api/sendKey/841a54cbcf8a8086",
-		method: 'post',
-		data: {keyCode: parametros.keyCode},
-		success: function(resposta){
-			console.log(resposta);
-		}
-	});
 }
 
 $('.library').click(function(){
 	console.log('Você abriu a biblioteca');
 	parametros.keyCode = TVkeyCodes['OPEN_CLOSE_LIB'];
 	sendRequest();
-	$( ".botoesNumericos" ).prop( "disabled", true );
 	$('.navigation').toggleClass("hidden");
 	$('.library').toggleClass("hidden");
-	$('.conteudo2').toggleClass("opacity");
 	$('.rightButton').attr('onclick', 'trocaVideo("direita")');
 	$('.leftButton').attr('onclick', 'trocaVideo("esquerda")');
 	$('.libraryTitle').toggleClass("hidden");
 	$('.libraryDesc').toggleClass("hidden");
+	$('.rightTitle').addClass("hidden");
+	$('.leftTitle').addClass("hidden");
 });
 
 $('.navigation').click(function(){
@@ -111,9 +60,47 @@ $('.navigation').click(function(){
 	sendRequest();
 	$('.navigation').toggleClass("hidden");
 	$('.library').toggleClass("hidden");
-	$('.conteudo2').toggleClass("opacity");
 	$('.rightButton').attr('onclick', 'trocaCanal("direita")');
 	$('.leftButton').attr('onclick', 'trocaCanal("esquerda")');
 	$('.libraryTitle').toggleClass("hidden");
 	$('.libraryDesc').toggleClass("hidden");
+	$('.rightTitle').addClass("hidden");
+	$('.leftTitle').addClass("hidden");
+});
+
+// http://api_mysql.tv4e.pt/api/library2/sendKey/4abb55a5dfbe7634 Biblioteca de videos
+// http://api_mysql.tv4e.pt/api/sendKey/841a54cbcf8a8086 BOX Antigo
+// http://app.tv4e.pt/?id=4abb55a5dfbe7634 Acesso para Web
+function sendRequest(){
+	$.ajax({
+		url:"http://api_mysql.tv4e.pt/api/sendKey/4abb55a5dfbe7634",
+		method: 'post',
+		data: {keyCode: parametros.keyCode},
+		success: function(resposta){
+			console.log(resposta);
+		}
+	});
+	console.log("[RCC] Keycode passado: " + parametros.keyCode + ".");
+}
+
+function sendRequestVideo(){
+	$.ajax({
+		url:"http://api_mysql.tv4e.pt/library2/api/sendKey/4abb55a5dfbe7634",
+		method: 'post',
+		data: {keyCode: parametros.keyCode},
+		success: function(resposta){
+			console.log(resposta);
+		}
+	});
+	console.log("[RCC] Keycode passado: " + parametros.keyCode + ".");
+}
+
+$('.leftButton').click(function(){
+	$('.leftTitle').removeClass("hidden");
+	$('.rightTitle').addClass("hidden");
+});
+
+$('.rightButton').click(function(){
+	$('.leftTitle').addClass("hidden");
+	$('.rightTitle').removeClass("hidden");
 });

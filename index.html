@@ -12,7 +12,7 @@
 					<img src="assets/images/logomarca.png" class="logomarca">
 				</div>
 				<p class="libraryTitle hidden"> Biblioteca de Vídeos </p>
-				<div class="conteudo1">
+				<div class="content">
 					<div class="control">
 						<button class="rightButton" value="direita" onclick="trocaCanal('direita')">>></button>
 						<button class="leftButton" value="esquerda" onclick="trocaCanal('esquerda')"><<</button>
@@ -25,24 +25,8 @@
 						<img src="assets/images/seta.svg" class="setaLibrary">  
 					</button>
 				</div>
-				<div class="conteudo2">
-					<p id="channel" class="channel"></p>
-					<button class="botoesNumericos" onclick="adicionarCanal('1')">1</button>
-					<button class="botoesNumericos" onclick="adicionarCanal('2')">2</button>
-					<button class="botoesNumericos" onclick="adicionarCanal('3')">3</button>
-					<button class="botoesNumericos" onclick="adicionarCanal('4')">4</button>
-					<button class="botoesNumericos" onclick="adicionarCanal('5')">5</button>
-					<button class="botoesNumericos" onclick="adicionarCanal('6')">6</button>
-					<button class="botoesNumericos" onclick="adicionarCanal('7')">7</button>
-					<button class="botoesNumericos" onclick="adicionarCanal('8')">8</button>
-					<button class="botoesNumericos" onclick="adicionarCanal('9')">9</button>
-					<button class="botoesNumericos" onclick="removeCanal()"> 
-						<img src="assets/images/delete.svg" class="delete">
-					</button>
-					<button class="botoesNumericos" onclick="adicionarCanal('0')">0</button>
-					
-				</div>
-				<p class="libraryDesc hidden"> Para trocar de vídeo, esquerda e direita </p>
+				<p class="libraryDesc leftTitle hidden"> Você trocou para esquerda. </p>
+				<p class="libraryDesc rightTitle hidden"> Você trocou para direita. </p>
 			</div>
 		</div>
 		<script src="assets/javascript/jquery.min.js"></script>
